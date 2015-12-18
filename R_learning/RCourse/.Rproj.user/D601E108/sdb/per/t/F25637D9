@@ -1,0 +1,25 @@
+{
+    "contents" : "",
+    "created" : 1449635026744.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "F25637D9",
+    "lastKnownWriteTime" : 27866499440705583,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "h1mf1r7st2",
+        "caption" : "ozone",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=ozone&cache_key=h1mf1r7st2",
+        "displayedObservations" : 153,
+        "environment" : "",
+        "object" : "ozone",
+        "totalObservations" : 153,
+        "variables" : 6
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "type" : "r_dataframe"
+}

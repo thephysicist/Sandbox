@@ -1,0 +1,18 @@
+{
+    "contents" : "corr <- function(directory, threshold = 0)\n{\n  files <- list.files(directory)\n  output <- vector(mode  = \"numeric\")\n  for (f in files)\n  {\n    psep <- if (Sys.info()['sysname'] == 'Windows'){'\\\\'} else {'/'}\n    data <- read.csv(paste(directory, f, sep = psep))\n    comp <- complete.cases(data[[\"Date\"]], data[[\"sulfate\"]], data[[\"nitrate\"]], data[[\"ID\"]])\n    if (length(comp[comp]) > threshold)\n    {\n      nsCorr = cor(data[[\"sulfate\"]][comp], data[[\"nitrate\"]][comp])\n      output <- c(output, nsCorr)\n    }\n  }\n  output\n}",
+    "created" : 1450321086420.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3174920845",
+    "id" : "94EBE28E",
+    "lastKnownWriteTime" : 1450322451,
+    "path" : "C:/Users/Ken/Desktop/Sandbox/R_learning/RCourse/corr.R",
+    "project_path" : "corr.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

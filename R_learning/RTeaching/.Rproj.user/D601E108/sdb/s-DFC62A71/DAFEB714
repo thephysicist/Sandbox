@@ -1,0 +1,18 @@
+{
+    "contents" : "checkAndInstall <- function(packageName)\n{\n    # pkg is a matrix and its first column is a vector of package names\n    pkg <- installed.packages()\n    dsExists <- packageName %in% pkg[ , 1]\n    if (!dsExists)\n    {\n        print(paste(packageName, \"is currently not installed.\"))\n        print(paste(\"Installing\", packageName, \"...\"))\n        install.packages(packageName)\n    }\n    else\n    {\n        print(paste(packageName, \"is already installed.\"))\n    }\n}\n\nloadCourseData <- function()\n{\n    checkAndInstall(\"datasets\")\n    checkAndInstall(\"ggplot2\")\n    checkAndInstall(\"stats\")\n    checkAndInstall(\"graphics\")\n    \n    \n    print(\"test plotting ...\")\n    boxplot(weight ~ feed, data = chickwts, col = \"lightgray\",\n    varwidth = TRUE, notch = FALSE, main = \"chickwt data\",\n    ylab = \"Weight at six weeks (gm)\")\n    anova(fm1 <- lm(weight ~ feed, data = chickwts))\n    opar <- par(mfrow = c(2, 2), oma = c(0, 0, 1.1, 0),\n    mar = c(4.1, 4.1, 2.1, 1.1))\n    plot(fm1)\n    par(opar)\n}\n\n\nloadCourseData()",
+    "created" : 1450403789018.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "4131336204",
+    "id" : "DAFEB714",
+    "lastKnownWriteTime" : 1450406381,
+    "path" : "C:/Users/Ken/Desktop/Sandbox/R_learning/RTeaching/loadCourseData.R",
+    "project_path" : "loadCourseData.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

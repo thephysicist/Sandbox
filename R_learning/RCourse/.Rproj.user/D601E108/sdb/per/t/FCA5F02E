@@ -1,0 +1,18 @@
+{
+    "contents" : "pollutantmean <- function(directory, pollutant, id = 1:332)\n{\n  psum <- 0.0\n  pcount <- 0.0\n  for (i in id)\n  {\n    psep <- if (Sys.info()['sysname'] == 'Windows'){'\\\\'} else {'/'}\n    data <- read.csv(paste(directory, paste(sprintf('%03d', i),'.csv', sep = ''), sep = psep))\n    data <- data[[pollutant]][!is.na(data[[pollutant]])]\n    psum <- psum + sum(data)\n    pcount <- pcount + length(data)\n  }\n  \n  psum / pcount\n}",
+    "created" : 1449735140749.000,
+    "dirty" : true,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3045281983",
+    "id" : "FCA5F02E",
+    "lastKnownWriteTime" : 1449736876,
+    "path" : "C:/Users/Ken/Desktop/Sandbox/R_learning/RCourse/pollutantmean.R",
+    "project_path" : "pollutantmean.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

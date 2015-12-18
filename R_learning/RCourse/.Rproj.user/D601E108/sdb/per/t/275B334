@@ -1,0 +1,18 @@
+{
+    "contents" : "complete <- function(directory, id = 1:332)\n{\n  nobs <- vector(length = length(id))\n  index = 1\n  for (i in id)\n  {\n    psep <- if (Sys.info()['sysname'] == 'Windows'){'\\\\'} else {'/'}\n    data <- read.csv(paste(directory, paste(sprintf('%03d', i),'.csv', sep = ''), sep = psep))\n    nobs[index] <- sum(complete.cases(data[['nitrate']], data[['sulfate']]))\n    index = index + 1\n  }\n  \n  df <- data.frame(id, nobs)\n  df\n}",
+    "created" : 1449737444306.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2008520785",
+    "id" : "275B334",
+    "lastKnownWriteTime" : 1449738189,
+    "path" : "C:/Users/Ken/Desktop/Sandbox/R_learning/RCourse/complete.R",
+    "project_path" : "complete.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

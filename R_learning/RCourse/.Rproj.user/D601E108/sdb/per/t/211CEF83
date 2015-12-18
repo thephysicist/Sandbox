@@ -1,0 +1,18 @@
+{
+    "contents" : "add2 <- function(x, y)\n{\n  x + y\n}\n\nabove10 <- function(x)\n{\n  use <- x > 10\n  x[use]\n}\n\nabove <- function(x, n = 10)\n{\n  use <- x > n\n  x[use]\n}\n\ncolumnmean <- function(y, removeNA = TRUE)\n{\n  nc <- ncol(y)\n  means <- numeric(nc)\n  for (i in 1:nc)\n  {\n    means[i] <- mean(y[,i], na.rm = removeNA)\n  }\n  means\n}\n\nf <- function(a, b)\n{\n  print(a)\n  print(b)\n}",
+    "created" : 1449634415715.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "4273461825",
+    "id" : "211CEF83",
+    "lastKnownWriteTime" : 1449733879,
+    "path" : "C:/Users/Ken/Desktop/Sandbox/R_learning/RCourse/add2.R",
+    "project_path" : "add2.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "type" : "r_source"
+}
